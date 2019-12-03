@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "prestart": "rm -rf dist && tsc",
+    "start": "concurrently --kill-others npm:start-*",
+    "start-node": "node ./dist/src/server.js",
     "test": "jest",
     "build": "tsc",
     "watch": "concurrently --kill-others npm:watch-*",
