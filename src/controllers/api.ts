@@ -1,7 +1,6 @@
 import { Response, Request, NextFunction } from "express";
 import axios from "axios";
 import config from "config";
-import qs from "qs";
 
 const headers = {
   "Bankin-Version": <string>config.get("bankin_version"),
